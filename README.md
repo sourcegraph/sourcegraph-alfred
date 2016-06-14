@@ -6,7 +6,7 @@
 
 Sourcegraph for Alfred allows you to view Sourcegraph search results in Alfred App
 
-![Sourcegraph for Alfred](images/setup.jpg)
+![Sourcegraph for Alfred](images/setup.png)
 
 ## Installation
 
