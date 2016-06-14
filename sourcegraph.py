@@ -2,7 +2,6 @@
 
 import sys
 from workflow import Workflow, ICON_WEB, web
-from threading import Thread
 from urllib import quote
 
 def main(wf):
@@ -63,18 +62,15 @@ def main(wf):
                         icon='sourcegraph-mark.png')
 
         wf.send_feedback()
-
-
-
+        
 if __name__ == u"__main__":
     
     update_settings = {
-        'github_slug': 'sourcegraph/sourcegraph-alfred',
+        'github_slug': 'rohan/sourcegraph-alfred',
         'frequency': 1
     }
 
     wf = Workflow(update_settings=update_settings)
     if wf.update_available:
         wf.start_update()    
-    
     sys.exit(wf.run(main))
