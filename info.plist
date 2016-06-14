@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.sourcegraph.alfred</string>
+	<key>connections</key>
+	<dict>
+		<key>B7B7DA0B-84D0-4DC3-A7FA-153AFA3B7860</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>64F20F2B-A336-4CE8-8B23-36C9A5F9E68D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Rohan Pai</string>
+	<key>description</key>
+	<string>Sourcegraph Alfred Workflow</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Sourcegraph</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>sg</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Fetching Results...</string>
+				<key>script</key>
+				<string>python sourcegraph.py i "{query}"</string>
+				<key>subtext</key>
+				<string>Try "http.get"</string>
+				<key>title</key>
+				<string>sg &gt; Search for information</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B7B7DA0B-84D0-4DC3-A7FA-153AFA3B7860</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "https://sourcegraph.com/{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>64F20F2B-A336-4CE8-8B23-36C9A5F9E68D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>@TODO</string>
+	<key>uidata</key>
+	<dict>
+		<key>64F20F2B-A336-4CE8-8B23-36C9A5F9E68D</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+		<key>B7B7DA0B-84D0-4DC3-A7FA-153AFA3B7860</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://sourcegraph.com</string>
+</dict>
+</plist>
