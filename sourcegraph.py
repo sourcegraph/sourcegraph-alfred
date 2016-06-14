@@ -66,7 +66,7 @@ def main(wf):
 if __name__ == u"__main__":
     
     update_settings = {
-        'github_slug': 'rohan/sourcegraph-alfred',
+        'github_slug': 'sourcegraph/sourcegraph-alfred',
         'frequency': 1
     }
 
