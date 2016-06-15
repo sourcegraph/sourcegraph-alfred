@@ -73,7 +73,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open "https://sourcegraph.com/{query}"</string>
+				<string>open "https://sourcegraph.com/{query}?utm_source=extension&amp;app=alfred"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
