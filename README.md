@@ -4,7 +4,7 @@
 
 ## Overview
 
-Sourcegraph for Alfred allows you to view Sourcegraph search results in Alfred, the macOS productivity app.
+Sourcegraph for Alfred allows you to search for symbols, functions and definitions in Alfred, the macOS productivity app.
 
 ## Installation
 
@@ -13,7 +13,10 @@ To install Sourcegraph for Alfred, download the .alfredworklow file [from the la
 ![Sourcegraph for Alfred](images/setup.png)
 
 ## Usage
-TODO
+Usage:
+Activate Alfred using your custom launcher shortcut.
+
+To search type: `sg {{query}}` into Alfred where `{{query}}` is a symbol, function and definition
 
 ## Support
 
