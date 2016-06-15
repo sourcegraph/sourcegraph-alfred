@@ -1,20 +1,20 @@
-# Sourcegraph for Alfred 
+# Sourcegraph for Alfred
 
-*Sourcegraph for Alfred is in beta mode. If you have feedback or experience issues, please email us at help@sourcegraph.com or file an issue [here](https://github.com/sourcegraph/sourcegraph-sublime/issues).*
+*Sourcegraph for Alfred is in beta mode. Feedback or issue? Please email us at support@sourcegraph.com or [file an issue.](https://github.com/sourcegraph/sourcegraph-sublime/issues)*
 
 ## Overview
 
-Sourcegraph for Alfred allows you to view Sourcegraph search results in Alfred App
-
-![Sourcegraph for Alfred](images/setup.png)
+Sourcegraph for Alfred allows you to view Sourcegraph search results in Alfred, the macOS productivity app.
 
 ## Installation
 
-To install Sourcegraph for Alfred, please install the Alfred Workflow
+To install Sourcegraph for Alfred, download the .alfredworklow file [from the latest release page.](https://github.com/sourcegraph/sourcegraph-alfred/releases/latest)
+
+![Sourcegraph for Alfred](images/setup.png)
 
 ## Usage
-@TODO
+TODO
 
 ## Support
 
-Sourcegraph for Sublime has currently only been tested using Sublime Text 3.
+Sourcegraph for Alfred is compatible with Alfred versions 2 and 3.

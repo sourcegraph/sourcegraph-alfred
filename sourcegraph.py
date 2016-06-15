@@ -40,7 +40,7 @@ def main(wf):
                                 subtitle=subtitle,
                                 arg= post['Repo']+'/-/'+searchtype+'/'+post['UnitType']+'/'+post['Unit']+'/-/'+post['Path'],
                                 valid=True,
-                                icon='doc-code.png')
+                                icon='images/images/doc-code.png')
                 except Exception as e:
                     sys.stderr.write(str(e))
 
@@ -48,7 +48,7 @@ def main(wf):
             wf.add_item(title= 'No results found for "'  + query + '" ',
                         subtitle = "",
                         valid=True,
-                        icon='sourcegraph-mark.png')
+                        icon='images/sourcegraph-mark.png')
 
         # Send the results to Alfred as XML
         wf.send_feedback()
@@ -59,12 +59,12 @@ def main(wf):
                         subtitle="",
                         arg= "",
                         valid=False ,
-                        icon='sourcegraph-mark.png')
+                        icon='images/sourcegraph-mark.png')
 
         wf.send_feedback()
-        
+
 if __name__ == u"__main__":
-    
+
     update_settings = {
         'github_slug': 'sourcegraph/sourcegraph-alfred',
         'frequency': 1
@@ -72,5 +72,5 @@ if __name__ == u"__main__":
 
     wf = Workflow(update_settings=update_settings)
     if wf.update_available:
-        wf.start_update()    
+        wf.start_update()
     sys.exit(wf.run(main))
