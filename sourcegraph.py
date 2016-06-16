@@ -4,6 +4,15 @@ import sys
 from workflow import Workflow, ICON_WEB, web
 from urllib import quote
 
+
+icon_mapping = {
+    "Java": "images/icons/java.png",
+    "C": "images/icons/c-original.png",
+    "Go": "images/icons/go-original.png",
+    "C#": "images/icons/csharp-original.png",
+    "Python": "images/icons/python-original.png"
+}
+
 def main(wf):
 
     if wf.args and len(wf.args) > 1:
@@ -12,7 +21,7 @@ def main(wf):
 
         searchtype = "info" if searchtype == 'i' else "def"
 
-        url = "https://sourcegraph.com/.api/global-search?Query=%s&Limit=10" % query.replace(' ' , '+')
+        url = "https://sourcegraph.com/.api/global-search?Query=%s&Limit=15" % query.replace(' ' , '+')
 
         request = web.get(url)
 
@@ -30,18 +39,21 @@ def main(wf):
             wf.add_item(title="No results found for \"%s\"" % query,
                         subtitle = "",
                         valid=False,
-                        icon='sourcegraph-mark.png')
+                        icon='images/sourcegraph-mark.png')
             wf.send_feedback()
             return
         for post in posts:
             try:
+                icon = "images/icons/doc-code.png"
+                if post['FmtStrings']['Language'] in icon_mapping:
+                    icon = icon_mapping[post['FmtStrings']['Language']]
                 title = post['FmtStrings']['Name']['ScopeQualified']
                 subtitle = "from %s" % post['FmtStrings']['Name']['LanguageWideQualified']
                 wf.add_item(title=title,
                             subtitle=subtitle,
                             arg= "%s/-/%s/%s/%s/-/%s" % (post['Repo'], searchtype, post['UnitType'], post['Unit'], post['Path']),
                             valid=True,
-                            icon='doc-code.png')
+                            icon=icon)
             except Exception as e:
                 sys.stderr.write(str(e))
         # Send the results to Alfred as XML
