@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.sourcegraph.alfred</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>B7B7DA0B-84D0-4DC3-A7FA-153AFA3B7860</key>
@@ -19,7 +21,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Rohan Pai</string>
+	<string>Sourcegraph</string>
 	<key>description</key>
 	<string>Sourcegraph Alfred Workflow</string>
 	<key>disabled</key>
@@ -52,7 +54,7 @@
 				<key>subtext</key>
 				<string>Try "http.get"</string>
 				<key>title</key>
-				<string>sg &gt; Search for information</string>
+				<string>sg &gt; Search for symbols, functions and definitions...</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -73,7 +75,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open "https://sourcegraph.com/{query}?utm_source=extension&amp;app=alfred"</string>
+				<string>open "https://sourcegraph.com/{query}?utm_source=integration&amp;app=alfred"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -86,7 +88,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>@TODO</string>
+	<string>Sourcegraph: https://sourcegraph.com/
+GitHub: https://github.com/sourcegraph/sourcegraph-alfred</string>
 	<key>uidata</key>
 	<dict>
 		<key>64F20F2B-A336-4CE8-8B23-36C9A5F9E68D</key>
