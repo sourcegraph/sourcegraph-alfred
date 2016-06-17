@@ -1,0 +1,9 @@
+machine:
+  pre:
+    - pyenv local 2.7
+  python:
+    version: 2.7
+    
+test:
+  override:
+    - python test_sourcegraph.py

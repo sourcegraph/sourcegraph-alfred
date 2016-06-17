@@ -13,6 +13,21 @@ icon_mapping = {
     "Python": "images/icons/python-original.png"
 }
 
+
+def get_posts(query):
+    url = "https://sourcegraph.com/.api/global-search?Query=%s&Limit=15" % query.replace(' ' , '+')
+
+    request = web.get(url)
+
+    # throw an error if request failed
+    # Workflow will catch this and show it to the user
+    request.raise_for_status()
+
+    # Parse the JSON returned by pinboard and extract the posts
+    result = request.json()
+    posts = result['Defs']
+    return posts
+
 def main(wf):
 
     if wf.args and len(wf.args) > 1:
@@ -21,17 +36,7 @@ def main(wf):
 
         searchtype = "info" if searchtype == 'i' else "def"
 
-        url = "https://sourcegraph.com/.api/global-search?Query=%s&Limit=15" % query.replace(' ' , '+')
-
-        request = web.get(url)
-
-        # throw an error if request failed
-        # Workflow will catch this and show it to the user
-        request.raise_for_status()
-
-        # Parse the JSON returned by pinboard and extract the posts
-        result = request.json()
-        posts = result['Defs']
+        posts = get_posts(query)
 
         wf.clear_data()
 
