@@ -1,6 +1,8 @@
-# Sourcegraph for Alfred [ [Download Latest Version](https://github.com/sourcegraph/sourcegraph-alfred/releases/latest) ]
+# [Sourcegraph](https://sourcegraph.com) for Alfred [ [Download Latest Version](https://github.com/sourcegraph/sourcegraph-alfred/releases/latest) ]
 
 *Sourcegraph for Alfred is in beta mode. Feedback or issue? Please email us at support@sourcegraph.com or [file an issue.](https://github.com/sourcegraph/sourcegraph-alfred/issues)*
+
+[Sourcegraph](https://sourcegraph.com) is a global code search and cross‑references engine. Search for a function, type, or package, and see how other developers use it, across all repositories. Sourcegraph for Alfred brings you the power of Sourcegraph global code search to your Alfred application launcher.
 
 ## Overview
 
@@ -23,6 +25,8 @@ Try some common searches:
 - `http.Get`
 - `Sprintf`
 - `func Decode`
+- `gorilla/mux`
+- To see what else works, try [global code search on Sourcegraph](https://sourcegraph.com/search)
 
 ## Support
 
