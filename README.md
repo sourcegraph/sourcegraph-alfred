@@ -1,4 +1,4 @@
-# Sourcegraph for Alfred [ [Download Workflow](https://github.com/sourcegraph/sourcegraph-alfred/releases/latest) ] [![CircleCI](https://circleci.com/gh/sourcegraph/sourcegraph-sublime.svg?style=svg)](https://circleci.com/gh/sourcegraph/sourcegraph-sublime)
+# Sourcegraph for Alfred [ [Download Workflow](https://github.com/sourcegraph/sourcegraph-alfred/releases/latest) ] [![CircleCI](https://circleci.com/gh/sourcegraph/sourcegraph-alfred.svg?style=svg)](https://circleci.com/gh/sourcegraph/sourcegraph-sublime)
 
 *Sourcegraph for Alfred is in beta mode. Feedback or issue? Please email us at support@sourcegraph.com or [file an issue.](https://github.com/sourcegraph/sourcegraph-alfred/issues)*
 
