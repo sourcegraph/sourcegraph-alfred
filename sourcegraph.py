@@ -44,6 +44,12 @@ def main(wf):
             return
         for post in posts:
             try:
+                arg = post['Repo']
+
+                # for packages, the entire file path does not need to be generated
+                if post['File'] != "" and post['File'] != "." and post['Kind'] != "package":
+                    arg += "/-/%s/%s/%s/-/%s" % (searchtype, post['UnitType'], post['Unit'], post['Path'])
+
                 icon = "images/icons/doc-code.png"
                 if post['FmtStrings']['Language'] in icon_mapping:
                     icon = icon_mapping[post['FmtStrings']['Language']]
@@ -51,7 +57,7 @@ def main(wf):
                 subtitle = "from %s" % post['FmtStrings']['Name']['LanguageWideQualified']
                 wf.add_item(title=title,
                             subtitle=subtitle,
-                            arg= "%s/-/%s/%s/%s/-/%s" % (post['Repo'], searchtype, post['UnitType'], post['Unit'], post['Path']),
+                            arg= arg,
                             valid=True,
                             icon=icon)
             except Exception as e:
