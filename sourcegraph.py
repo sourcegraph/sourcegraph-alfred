@@ -1,8 +1,10 @@
  # encoding: utf-8
 
 import sys
+
 from workflow import Workflow, ICON_WEB, web
 from urllib import quote
+ 
 
 
 icon_mapping = {
@@ -12,7 +14,6 @@ icon_mapping = {
     "C#": "images/icons/csharp-original.png",
     "Python": "images/icons/python-original.png"
 }
-
 
 def get_posts(query):
     url = "https://sourcegraph.com/.api/global-search?Query=%s&Limit=15" % query.replace(' ' , '+')
