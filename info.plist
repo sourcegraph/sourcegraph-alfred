@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>64F20F2B-A336-4CE8-8B23-36C9A5F9E68D</string>
+				<string>11D335FD-F8B8-44A0-A0EB-C3400FD46132</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -30,6 +30,25 @@
 	<string>Sourcegraph</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "https://sourcegraph.com/{query}?utm_source=integration&amp;type=alfred"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>64F20F2B-A336-4CE8-8B23-36C9A5F9E68D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -75,14 +94,14 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open "https://sourcegraph.com/{query}?utm_source=integration&amp;type=alfred"</string>
+				<string>python sourcegraph_one_launcher.py "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>64F20F2B-A336-4CE8-8B23-36C9A5F9E68D</string>
+			<string>11D335FD-F8B8-44A0-A0EB-C3400FD46132</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -92,6 +111,11 @@
 GitHub: https://github.com/sourcegraph/sourcegraph-alfred</string>
 	<key>uidata</key>
 	<dict>
+		<key>11D335FD-F8B8-44A0-A0EB-C3400FD46132</key>
+		<dict>
+			<key>ypos</key>
+			<real>240</real>
+		</dict>
 		<key>64F20F2B-A336-4CE8-8B23-36C9A5F9E68D</key>
 		<dict>
 			<key>ypos</key>
@@ -100,7 +124,7 @@ GitHub: https://github.com/sourcegraph/sourcegraph-alfred</string>
 		<key>B7B7DA0B-84D0-4DC3-A7FA-153AFA3B7860</key>
 		<dict>
 			<key>ypos</key>
-			<real>120</real>
+			<real>230</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
